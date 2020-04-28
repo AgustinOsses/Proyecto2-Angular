@@ -74,18 +74,19 @@ export class HeroesService {
     }
 
     buscarHeroes(termino:string){
+        debugger
         let heroesArr:Heroe [] = [];
 
         termino = termino.toLowerCase();
 
-        for(let h of this.heroes){        
+        this.heroes.forEach(h =>{        
           let nombre = h.nombre.toLowerCase();
 
           if(nombre.indexOf( termino )  >= 0 ){
             heroesArr.push(h);
-          }
-          return heroesArr;
-        }
+          }  
+        })
+        return heroesArr;
     }  
 
 
