@@ -79,13 +79,18 @@ export class HeroesService {
 
         termino = termino.toLowerCase();
 
-        this.heroes.forEach(h =>{        
-          let nombre = h.nombre.toLowerCase();
+        for(let i = 0; i < this.heroes.length;i++){       
+          
+          let heroe = this.heroes[i];
+          let nombre = heroe.nombre.toLowerCase();
+         
 
           if(nombre.indexOf( termino )  >= 0 ){
-            heroesArr.push(h);
+            heroe.idx = i;
+            heroesArr.push(heroe);
           }  
-        })
+        } 
+        
         return heroesArr;
     }  
 
@@ -100,5 +105,6 @@ export interface Heroe{
     img: string
     aparicion: string
     casa: string
+    idx?:number;
 
 }
