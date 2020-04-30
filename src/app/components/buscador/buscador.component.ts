@@ -9,8 +9,9 @@ import {Router} from '@angular/router';
   templateUrl: './buscador.component.html',
 })
 export class BuscadorComponent implements OnInit {
-  debugger
+  
   termino:string;
+
   heroArr:Heroe[]=[];
 
   constructor(private activatedRoute:ActivatedRoute,

@@ -74,7 +74,7 @@ export class HeroesService {
     }
 
     buscarHeroes(termino:string){
-        debugger
+        
         let heroesArr:Heroe [] = [];
 
         termino = termino.toLowerCase();
